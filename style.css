@@ -1,0 +1,53 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #af1458, #fa1478);
+}
+
+button {
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+button #btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  background-color: #f50;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.3s, height 0.3s;
+  z-index: -1;
+}
+
+button:hover {
+  color: #fff;
+}
+
+button:hover #btn {
+  width: 350%;
+  height: 350%;
+  color: #fff;
+}
